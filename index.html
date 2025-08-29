@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>thing</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    html,body { height:100%; margin:0; font-family: sans-serif; background:#111; color:#ddd; }
+    #overlay {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 12px 14px;
+      background: rgba(0,0,0,0.5);
+      border-radius: 8px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+      max-width: 320px;
+      z-index: 10;
+      cursor: pointer;
+      text-align: center;
+    }
+    #overlay small { display:block; margin-top:6px; color:#aaa; font-size:12px; }
+    canvas { display:block; z-index: 0; position: absolute; top: 0; left: 0; }
+    #overlay { z-index: 10; }
+  </style>
+</head>
+<body>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.module.js",
+        "three/examples/jsm/": "https://cdn.jsdelivr.net/npm/three@0.152.2/examples/jsm/"
+      }
+    }
+    </script>
+
+  <div id="overlay">
+    <strong id="status" style="color:#6ef; margin-top:8px;">Start</strong>
+    <small>Move: W/A/S/D</small>
+    <small>Jump: Space</small>
+    <small>Unlock Mouse: Esc</small>
+    <small>Grid Lines: G</small>
+    <small>Placement Helper: Tab</small>
+    
+    
+  </div>
+
+  <script type="module" src="game.js"></script>
+</body>
+</html>
